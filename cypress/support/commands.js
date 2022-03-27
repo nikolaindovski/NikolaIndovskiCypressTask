@@ -23,3 +23,8 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('forceVisit', url => {
+    cy.window().then(win => {
+        return win.open(url, '_self');
+    });
+});
