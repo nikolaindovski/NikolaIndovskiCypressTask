@@ -44,9 +44,7 @@ export class BasePage{
 
     static openHoodiesPage() {
         cy.visit("https://lv.sportsdirect.com/mens/clothing/hoodies")
+        cy.viewport(1024, 768)
     }
 
-    static selectOption(selector,option){
-        cy.get(selector).select(option)
-    }
 }

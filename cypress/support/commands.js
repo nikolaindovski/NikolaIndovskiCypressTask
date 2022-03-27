@@ -28,3 +28,5 @@ Cypress.Commands.add('forceVisit', url => {
         return win.open(url, '_self');
     });
 });
+
+import '@testing-library/cypress/add-commands';
